@@ -1,13 +1,14 @@
-package com.bridgelabz.javacore;
+package com.bridgelabz.javacore.model;
 
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 
 public class Users {
-    @CsvBindByName
+    @CsvBindByPosition(position = 0)
     private String name;
-    @CsvBindByName(column = "EMAIL", required = true)
+    @CsvBindByPosition(position = 1)
     private String email;
-    @CsvBindByName(column = "PHONE")
+    @CsvBindByPosition(position = 2)
     private String phoneNo;
 
     public Users() {

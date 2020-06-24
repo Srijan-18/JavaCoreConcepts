@@ -1,4 +1,4 @@
-package com.bridgelabz.javacore;
+package com.bridgelabz.javacore.services;
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
@@ -14,13 +14,13 @@ public class ReadFromCSVFile {
     public static void main(String[] args) {
         try (
                 Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH));
-                CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(1).build()
+                CSVReader csvReader = new CSVReader(reader);
         ) {
             //Reading Records One by One In String Array
             String[] nextRecord;
             while ((nextRecord = csvReader.readNext()) != null) {
-                System.out.println("Name :" + nextRecord[1]);
-                System.out.println("Email :" + nextRecord[0]);
+                System.out.println("Name :" + nextRecord[0]);
+                System.out.println("Email :" + nextRecord[1]);
                 System.out.println("Phone :" + nextRecord[2]);
                 System.out.println("\n******");
             }

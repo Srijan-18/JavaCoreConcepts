@@ -1,5 +1,6 @@
-package com.bridgelabz.javacore;
+package com.bridgelabz.javacore.services;
 
+import com.bridgelabz.javacore.model.Users;
 import com.google.gson.Gson;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;

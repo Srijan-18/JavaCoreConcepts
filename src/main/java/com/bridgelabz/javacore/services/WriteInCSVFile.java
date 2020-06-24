@@ -1,5 +1,6 @@
-package com.bridgelabz.javacore;
+package com.bridgelabz.javacore.services;
 
+import com.bridgelabz.javacore.model.Users;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.StatefulBeanToCsv;
 import com.opencsv.bean.StatefulBeanToCsvBuilder;
