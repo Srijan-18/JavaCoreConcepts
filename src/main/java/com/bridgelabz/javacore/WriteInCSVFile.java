@@ -23,8 +23,7 @@ public class WriteInCSVFile {
                 Writer writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_FILE_PATH))
         ) {
             StatefulBeanToCsv beanToCsv = new StatefulBeanToCsvBuilder(writer)
-                    .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER)
-                    .build();
+                    .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER).build();
             List<Users> users = new ArrayList<>();
             users.add(new Users("Sunder Pichai", "sunderpichai@gmail.com", "+1-1111111111"));
             users.add(new Users("Satya Nadella", "satya@gmail.com", "+1-111111111111"));

@@ -1,6 +1,7 @@
 package com.bridgelabz.javacore;
 
 import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -13,7 +14,7 @@ public class ReadFromCSVFile {
     public static void main(String[] args) {
         try (
                 Reader reader = Files.newBufferedReader(Paths.get(CSV_FILE_PATH));
-                CSVReader csvReader = new CSVReader(reader);
+                CSVReader csvReader = new CSVReaderBuilder(reader).withSkipLines(1).build()
         ) {
             //Reading Records One by One In String Array
             String[] nextRecord;

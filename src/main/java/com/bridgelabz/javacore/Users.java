@@ -3,12 +3,15 @@ package com.bridgelabz.javacore;
 import com.opencsv.bean.CsvBindByName;
 
 public class Users {
-    @CsvBindByName(column = "NAME",required = true)
+    @CsvBindByName
     private String name;
     @CsvBindByName(column = "EMAIL", required = true)
     private String email;
-    @CsvBindByName(column = "PHONE",required = true)
+    @CsvBindByName(column = "PHONE")
     private String phoneNo;
+
+    public Users() {
+    }
 
     public Users(String name, String email, String phoneNo) {
         this.name = name;
